@@ -1,0 +1,175 @@
+[MITM]
+hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, api-new.app.acfun.cn, *.amemv.com, *.snssdk.com, issuecdn.baidupcs.com, pan.baidu.com, c.tieba.baidu.com, newclient.map.baidu.com, act.vip.iqiyi.com, iface.iqiyi.com, clientaccess.10086.cn, wap.js.10086.cn, ggw.cmvideo.cn, ggic.cmvideo.cn, ggv.cmvideo.cn, ggx.cmvideo.cn, api.douban.com, rtbapi.douyucdn.cn, api.feng.com, business.msstatic.com, list-app-m.i4.cn, api.m.jd.com, ms.jr.jd.com, img*.360buyimg.com, pcvideoyd.titan.mgtv.com, interface*.music.163.com, api.yangkeduo.com, api.pinduoduo.com, ap*.smzdm.com, mpcs.suning.com, ssl.kohsocialapp.qq.com, news.ssp.qq.com, mp.weixin.qq.com, ulogs.umeng.com, ulogs.umengcloud.com, alogs.umeng.co, msg.umengcloud.com, a.qiumibao.com
+
+
+[URL Rewrite]
+# A
+# > 淘宝 - gw.alicdn.com, heic.alicdn.com
+^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/.+\.jpg_(9\d{2}|\d{4}) - REJECT
+^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) - REJECT
+
+# > 闲鱼 - acs.m.taobao.com
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ - REJECT
+
+# > 优酷
+^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - REJECT
+
+# ---
+# > AcFun - api-new.app.acfun.cn
+^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ - REJECT
+
+# B
+# > 字节跳动 - *.amemv.com, *.snssdk.com
+^https?:\/\/[\w-]+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - REJECT
+^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ - REJECT
+^https?:\/\/[\w-]+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - REJECT
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/img\/ad\.union\.api\/ - REJECT
+
+# > 百度网盘 - issuecdn.baidupcs.com
+^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx - REJECT
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - REJECT
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao - REJECT
+
+# > 贴吧 - c.tieba.baidu.com
+^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule - REJECT
+^https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo - REJECT
+^https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|newlog|mlog) - REJECT
+#^https?:\/\/c\.tieba\.baidu\.com\/c\/p\/img\?src= - REJECT-img
+#^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/logtogether\?cmd= - REJECT-img
+
+# > 百度地图 - newclient.map.baidu.com
+^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - REJECT
+
+# > 爱奇艺 - act.vip.iqiyi.com, iface.iqiyi.com
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - REJECT
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - REJECT
+^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - REJECT
+^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ - REJECT
+
+# C
+# > 中国移动 - clientaccess.10086.cn, wap.js.10086.cn
+^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - REJECT
+^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - REJECT
+
+# > CNTV
+^https?:\/\/www\.cntv\.cn\/nettv\/adp\/ - REJECT
+
+# > 咪咕视频 - ggw.cmvideo.cn, ggic.cmvideo.cn, ggv.cmvideo.cn, ggx.cmvideo.cn
+^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ - REJECT
+^https?:\/\/ggic\d?\.cmvideo\.cn\/ad\/ - REJECT
+^https?:\/\/ggv\.cmvideo\.cn\/v1\/iflyad\/ - REJECT-img
+^https?:\/\/ggx\.cmvideo\.cn\/request\/ - REJECT
+
+# D
+# > 豆瓣 - api.douban.com
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ - REJECT
+
+# > 斗鱼 - rtbapi.douyucdn.cn
+^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo - REJECT
+
+# E
+# > 饿了么 - cube.elemecdn.com
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ - REJECT
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_1\d{3},h_2\d{3}\/format,webp\/ - REJECT
+^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ - REJECT
+^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\? - REJECT
+
+# F
+# > 威锋网 - api.feng.com
+^https?:\/\/api\.feng\.com\/v\d\/advertisement\/.*Claunch - REJECT
+^https?:\/\/api\.feng\.com[\s\S]*?Claunch_screen - REJECT
+
+# G
+# > 谷歌 - *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com
+^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - REJECT-200
+^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - REJECT-200
+^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - REJECT-200
+^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - REJECT-200
+
+# H
+# > 韩剧TV
+^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? - REJECT
+
+# > 虎牙直播 - business.msstatic.com
+^https?:\/\/business\.msstatic\.com\/advertiser\/ - REJECT
+
+# > 虎扑
+^https?+:\/\/games\.mobileapi\.hupu\.com\/\d\/(?:\d\.){2}\d\/status\/init - REJECT
+
+# I
+# > 爱思助手 - list-app-m.i4.cn
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - REJECT
+
+# J
+# > 京东 - api.m.jd.com, ms.jr.jd.com, img*.360buyimg.com
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) - REJECT
+^https?:\/\/api\.m\.jd\.com\/openUpgrade - REJECT
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo - REJECT
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - REJECT
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - REJECT
+
+# M
+# > 芒果TV - pcvideoyd.titan.mgtv.com
+^https?:\/\/pcvideoyd\.titan\.mgtv\.com\/pb\/ - REJECT-img
+
+# N
+# > 网易云音乐 - interface*.music.163.com
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ - REJECT
+^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ - REJECT
+
+# P
+# > 拼多多 - api.yangkeduo.com, api.pinduoduo.com
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - REJECT
+
+# > 什么值得买 - ap*.smzdm.com
+^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading - REJECT
+^https?:\/\/app-api\.smzdm\.com\/util\/loading - REJECT
+^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php - REJECT
+
+# > 苏宁 - mpcs.suning.com
+^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ - REJECT
+^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo - REJECT
+
+# T
+# > 腾讯游戏 - ssl.kohsocialapp.qq.com
+^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons - REJECT
+^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info - REJECT
+
+# > 腾讯视频
+^https?:\/\/vv\.video\.qq\.com\/getvmind\? - REJECT
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+p20\d\.1\.mp4\? - REJECT
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 - REJECT
+^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 - REJECT
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_ - REJECT
+
+# > 腾讯体育 - news.ssp.qq.com
+^https?:\/\/news\.ssp\.qq\.com\/app - REJECT
+
+# > QQ音乐
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - REJECT
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ - REJECT
+
+# > 微信 - mp.weixin.qq.com
+^https?:\/\/mp\.weixin\.qq.com\/mp\/ad_complaint - REJECT
+^https?:\/\/mp\.weixin\.qq.com\/mp\/ad_video - REJECT
+^https?:\/\/mp\.weixin\.qq\.com\/(s|mp)\/(ad_|advertisement|getappmsgad|report|appmsgreport|appmsgpicreport) - REJECT-img
+
+# X
+# > 喜马拉雅FM
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/api\/v\d\/adRealTime - REJECT-200
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/(outadservice|ting\/preload)\/ - REJECT-200
+
+# Y
+# > Youtube++
+^https?:\/\/api\.catch\.gift\/api\/v\d\/pagead\/ - REJECT
+
+# > 友盟 - ulogs.umeng.com, ulogs.umengcloud.com, alogs.umeng.co, msg.umengcloud.com
+^https?:\/\/ulogs\.umeng\.com - REJECT-img
+^https?:\/\/ulogs\.umengcloud\.com - REJECT-img
+^https?:\/\/alogs\.umeng\.co - REJECT-img
+^https:\/\/msg\.umengcloud\.com\/admsg\/ - REJECT
+
+# Z
+# > 直播吧 - a.qiumibao.com
+^https?:\/\/a\.qiumibao\.com\/activities\/config\.php - REJECT
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d):\d+\/allOne\.php\?ad_name - REJECT
