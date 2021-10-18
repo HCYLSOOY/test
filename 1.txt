@@ -1,5 +1,5 @@
 [MITM]
-hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, api-new.app.acfun.cn, *.amemv.com, *.snssdk.com, issuecdn.baidupcs.com, pan.baidu.com, c.tieba.baidu.com, newclient.map.baidu.com, act.vip.iqiyi.com, iface.iqiyi.com, clientaccess.10086.cn, wap.js.10086.cn, ggw.cmvideo.cn, ggic.cmvideo.cn, ggv.cmvideo.cn, ggx.cmvideo.cn, api.douban.com, rtbapi.douyucdn.cn, api.feng.com, business.msstatic.com, list-app-m.i4.cn, api.m.jd.com, ms.jr.jd.com, img*.360buyimg.com, pcvideoyd.titan.mgtv.com, interface*.music.163.com, api.yangkeduo.com, api.pinduoduo.com, ap*.smzdm.com, mpcs.suning.com, ssl.kohsocialapp.qq.com, news.ssp.qq.com, mp.weixin.qq.com, ulogs.umeng.com, ulogs.umengcloud.com, alogs.umeng.co, msg.umengcloud.com, a.qiumibao.com
+hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, api-new.app.acfun.cn, *.amemv.com, *.snssdk.com, issuecdn.baidupcs.com, pan.baidu.com, c.tieba.baidu.com, act.vip.iqiyi.com, iface.iqiyi.com, ggw.cmvideo.cn, ggic.cmvideo.cn, ggv.cmvideo.cn, ggx.cmvideo.cn, api.douban.com, rtbapi.douyucdn.cn, business.msstatic.com, list-app-m.i4.cn, api.m.jd.com, ms.jr.jd.com, img*.360buyimg.com, pcvideoyd.titan.mgtv.com, interface*.music.163.com, api.yangkeduo.com, api.pinduoduo.com, ap*.smzdm.com, ssl.kohsocialapp.qq.com, news.ssp.qq.com, mp.weixin.qq.com, ulogs.umeng.com, ulogs.umengcloud.com, alogs.umeng.co, msg.umengcloud.com, a.qiumibao.com
 
 
 [URL Rewrite]
@@ -37,19 +37,11 @@ hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtub
 #^https?:\/\/c\.tieba\.baidu\.com\/c\/p\/img\?src= - REJECT-img
 #^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/logtogether\?cmd= - REJECT-img
 
-# > 百度地图 - newclient.map.baidu.com
-^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads - REJECT
-
 # > 爱奇艺 - act.vip.iqiyi.com, iface.iqiyi.com
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do - REJECT
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show - REJECT
 ^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo - REJECT
 ^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ - REJECT
-
-# C
-# > 中国移动 - clientaccess.10086.cn, wap.js.10086.cn
-^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - REJECT
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - REJECT
 
 # > CNTV
 ^https?:\/\/www\.cntv\.cn\/nettv\/adp\/ - REJECT
@@ -66,18 +58,6 @@ hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtub
 
 # > 斗鱼 - rtbapi.douyucdn.cn
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo - REJECT
-
-# E
-# > 饿了么 - cube.elemecdn.com
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ - REJECT
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_1\d{3},h_2\d{3}\/format,webp\/ - REJECT
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ - REJECT
-^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\? - REJECT
-
-# F
-# > 威锋网 - api.feng.com
-^https?:\/\/api\.feng\.com\/v\d\/advertisement\/.*Claunch - REJECT
-^https?:\/\/api\.feng\.com[\s\S]*?Claunch_screen - REJECT
 
 # G
 # > 谷歌 - *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com
@@ -125,10 +105,6 @@ hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtub
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading - REJECT
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading - REJECT
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php - REJECT
-
-# > 苏宁 - mpcs.suning.com
-^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ - REJECT
-^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo - REJECT
 
 # T
 # > 腾讯游戏 - ssl.kohsocialapp.qq.com
