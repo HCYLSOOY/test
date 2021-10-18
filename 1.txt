@@ -132,8 +132,8 @@ hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtub
 
 # X
 # > 喜马拉雅FM
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/api\/v\d\/adRealTime - REJECT-200
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/(outadservice|ting\/preload)\/ - REJECT-200
+^https?:\/\/.+?\/api\/v\d\/adRealTime - REJECT-200
+^https?:\/\/.+?\/(outadservice|ting\/preload)\/ - REJECT-200
 
 # Y
 # > Youtube++
