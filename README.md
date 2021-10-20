@@ -51,3 +51,7 @@
 - [ddgksf2013 / Cuttlefish](https://github.com/ddgksf2013/Cuttlefish)
 
 - [hundun / quanx](https://github.com/whyour/hundun/tree/master/quanx)
+
+- [Aaron-lv / sync](https://github.com/Aaron-lv/sync)
+
+- [faker2 / ](https://github.com/shufflewzc/faker2)
