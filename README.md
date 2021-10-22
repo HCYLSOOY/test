@@ -50,8 +50,8 @@
 
 - [hundun / quanx](https://github.com/whyour/hundun/tree/master/quanx)
 
-- [faker2 / ](https://github.com/shufflewzc/faker2)
+- [faker2 / ](https://github.com/shufflewzc/faker2)接入ddo助力池
 
-- [Aaron-lv / sync](https://github.com/Aaron-lv/sync)
+- [Aaron-lv / sync](https://github.com/Aaron-lv/sync)接入ddo助力池
 
-- [zero205 / ](https://github.com/zero205/JD_tencent_scf/tree/main)
+- [zero205 / ](https://github.com/zero205/JD_tencent_scf/tree/main)接入helloworld助力池
