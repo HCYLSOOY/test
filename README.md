@@ -32,8 +32,6 @@
 
 - [NobyDa / Script](https://github.com/NobyDa/Script)
 
-- [YamTian / zero205](https://github.com/YamTian/jd_study/tree/zero205)
-
 - [zZPiglet / Task](https://github.com/zZPiglet/Task/tree/master)
 
 - [ChuheGit / ](https://github.com/ChuheGit/1)
@@ -52,8 +50,8 @@
 
 - [hundun / quanx](https://github.com/whyour/hundun/tree/master/quanx)
 
-- [Aaron-lv / sync](https://github.com/Aaron-lv/sync)
-
 - [faker2 / ](https://github.com/shufflewzc/faker2)
+
+- [Aaron-lv / sync](https://github.com/Aaron-lv/sync)
 
 - [zero205 / ](https://github.com/zero205/JD_tencent_scf/tree/main)
