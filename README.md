@@ -52,6 +52,8 @@
 
 - [faker2 / ](https://github.com/shufflewzc/faker2) ddo助力池
 
+- [faker3 / ](https://github.com/shufflewzc/faker3)
+
 - [Aaron-lv / sync](https://github.com/Aaron-lv/sync) ddo助力池
 
 - [zero205 / ](https://github.com/zero205/JD_tencent_scf/tree/main) helloworld助力池
