@@ -56,6 +56,6 @@
 
 - [Aaron-lv / sync](https://github.com/Aaron-lv/sync) ddo助力池
 
-- [zero205 / ](https://github.com/zero205/JD_tencent_scf/tree/main) helloworld助力池
+- [zero205 / ](https://github.com/zero205/JD_tencent_scf/tree/main) ddo助力池
 
 - [JDHelloWorld / ](https://github.com/JDHelloWorld/jd_scripts) helloworld助力池
