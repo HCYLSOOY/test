@@ -48,14 +48,16 @@
 
 - [hundun / quanx](https://github.com/whyour/hundun/tree/master/quanx)
 
-- [smiek2221 / scripts](https://github.com/smiek2221/scripts) gua助力池
+- [smiek2221 / scripts](https://github.com/smiek2221/scripts) 
 
-- [faker2 / ](https://github.com/shufflewzc/faker2) ddo助力池
+- [faker2 / ](https://github.com/shufflewzc/faker2) 
 
 - [faker3 / ](https://github.com/shufflewzc/faker3)
 
-- [Aaron-lv / sync](https://github.com/Aaron-lv/sync) ddo助力池
+- [Aaron-lv / sync](https://github.com/Aaron-lv/sync) 
 
-- [zero205 / ](https://github.com/zero205/JD_tencent_scf/tree/main) ddo助力池
+- [zero205 / ](https://github.com/zero205/JD_tencent_scf/tree/main) 
 
-- [JDHelloWorld / ](https://github.com/JDHelloWorld/jd_scripts) helloworld助力池
+- [JDHelloWorld / ](https://github.com/JDHelloWorld/jd_scripts) 
+
+- [KingRan / ](https://github.com/KingRan/KR) 
